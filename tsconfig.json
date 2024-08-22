@@ -1,26 +1,28 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
-}
+	"compilerOptions": {
+	  "target": "es5", // 호환성을 위해 ES5로 타겟 설정
+	  "lib": ["dom", "dom.iterable", "esnext"], // 사용할 라이브러리 정의
+	  "declaration": true, // 타입 선언 파일 생성
+	  "declarationDir": "build/types", // 타입 선언 파일 저장 디렉토리
+	  "allowJs": true, // JS 파일 허용
+	  "skipLibCheck": true, // 라이브러리 체크 건너뛰기
+	  "sourceMap": true, // 소스맵 생성
+	  "esModuleInterop": true, // ES 모듈 호환성 설정
+	  "allowSyntheticDefaultImports": true, // default import 허용
+	  "strict": true, // 엄격한 타입 검사
+	  "forceConsistentCasingInFileNames": true, // 파일 이름 대소문자 일관성
+	  "noFallthroughCasesInSwitch": true, // switch 문에서 fallthrough 방지
+	  "noImplicitAny": false, // 파라미터를 명시할때 type을 지정
+	  "module": "esnext", // 모듈 시스템 설정
+	  "moduleResolution": "node", // 모듈 해석 방법 설정
+	  "resolveJsonModule": true, // JSON 모듈 해석 허용
+	  "isolatedModules": true, // 모듈 격리
+	  "jsx": "react-jsx", // React JSX 설정
+	  "baseUrl": "./", // 기본 경로 설정
+	  "rootDir": "./src", // 루트 디렉토리 설정
+	  "outDir": "./build" // 출력 디렉토리 설정
+	},
+	"include": ["src"], // 포함할 파일 경로
+	"exclude": ["node_modules", "build"] // 제외할 파일 경로
+  }
+  

@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoApp from "./components/TodoApp";
+import React, { useState } from 'react';
+import './styles/styles.scss';
+
 
 function App() {
+  const [showTodoApp, setShowTodoApp] = useState(false);
+
+  const handleShowTodoApp = () => {
+    setShowTodoApp(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!showTodoApp ? (
+        <div className="MainScreen">
+          <h1 className="mainTitle">My Todo App</h1>
+          <p className="description" onClick={handleShowTodoApp}>
+            Click here if you want to check your TODO
+          </p>
+        </div>
+      ) : (
+        <TodoApp />
+      )}
     </div>
   );
 }
